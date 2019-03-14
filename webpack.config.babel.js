@@ -1,9 +1,9 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const projectName = 'VanillaJS boilerplate';
+const projectName = 'LoFi Patatap clone';
 const indexPath = 'src/js/index.js';
-const templatePath = 'src/index.template.html';
+const templatePath = 'src/circles.html';
 
 module.exports = {
   entry: {
