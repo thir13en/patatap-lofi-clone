@@ -1,10 +1,10 @@
 {
-  "name": "juniper_ambulance_front",
+  "name": "patatap_lofi_clone",
   "version": "1.0.0",
-  "description": "A quick demo for MWC",
+  "description": "Creating a low fidelity clone of patatapp demo site",
   "main": "src/js/index.js",
-  "repository": "ssh://git@bitbucket.i2cat.net:7999/mwc/juniper_ambulance_front.git",
-  "author": "Santiago Lopez <santiago.lopez@i2cat.net>",
+  "repository": "https://github.com/thir13en/patatap-lofi-clone.git",
+  "author": "santiloopz",
   "license": "MIT",
   "scripts": {
     "dev": "webpack --mode=development",
