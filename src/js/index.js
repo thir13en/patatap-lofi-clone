@@ -1,4 +1,3 @@
 import * as paper from 'paper'
-
-module.exports = {
-}
+import 'normalize.css'
+import '../scss/styles.scss'
