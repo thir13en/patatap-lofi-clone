@@ -1,1 +1,8 @@
-<h1>Hello, <span id="universe"></span></h1>
+<script type="text/paperscript" canvas="myCanvas">
+   var path = new Path();
+   path.strokeColor = 'black';
+   var start = new Point(100, 100);
+   path.moveTo(start);
+   path.lineTo(start + [ 100, -50 ]);
+</script>
+<canvas id="myCanvas" resize></canvas>
