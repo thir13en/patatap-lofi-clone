@@ -1,10 +1,10 @@
+<!--<script canvas="myCanvas">-->
 <script type="text/paperscript" canvas="myCanvas">
-   var path = new Path();
-   path.strokeColor = 'black';
-   var start = new Point(100, 100);
-   path.moveTo(start);
-   path.lineTo(start + [ 100, -50 ]);
+    for(let i=0; i < 22; i++) {
+        for (let j=0; j < 22; j++) {
+            let circle = new Shape.Circle(new Point(100 + i*77, 100 + j*77), 22);
+            circle.fillColor = 'white';
+        }
+    }
 </script>
-<canvas id="myCanvas" resize></canvas>
-<h1>Test</h1>
-<p>Quick test</p>
+<canvas id="myCanvas" resize width="100%"></canvas>
