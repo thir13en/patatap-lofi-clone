@@ -1,21 +1,41 @@
 <script type="text/paperscript" canvas="myCanvas">
+    const circles = [];
     function onKeyDown(event) {
         const maxPoint = new Point(view.size.width, view.size.height);
         const randomPoint = Point.random();
         const point = maxPoint * randomPoint;
 
-        let circle = new Shape.Circle(point, 22);
-        circle.fillColor = 'white';
+        const circle = new Path.Circle(point, 333);
+        circle.fillColor = 'red';
+
+        circles.push(circle);
+    }
+
+    function onFrame(event) {
+        circles.forEach(circle => {
+            circle.fillColor.hue += 1;
+            circle.scale(.9);
+        });
     }
 </script>
 <script type="text/javascript" canvas="myCanvas">
-    // const maxPoint = new Point(view.size.width, view.size.height);
-    // const randomPoint = Point.random();
-    // const point = maxPoint * randomPoint;
-    //
+    // const circles = [];
     // function onKeyDown(event) {
-    //     let circle = new Shape.Circle(point, 22);
-    //     circle.fillColor = 'white';
+    //     const maxPoint = new Point(view.size.width, view.size.height);
+    //     const randomPoint = Point.random();
+    //     const point = maxPoint * randomPoint;
+    //
+    //     const circle = new Path.Circle(point, 333);
+    //     circle.fillColor = 'red';
+    //
+    //     circles.push(circle);
+    // }
+    //
+    // function onFrame(event) {
+    //     circles.forEach(circle => {
+    //         circle.fillColor.hue += 1;
+    //         circle.scale(.9);
+    //     });
     // }
 </script>
 <canvas id="myCanvas" resize width="100%"></canvas>
