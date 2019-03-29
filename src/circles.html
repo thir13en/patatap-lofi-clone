@@ -1,6 +1,11 @@
 <script type="text/paperscript" canvas="myCanvas">
+    const sound = new Howl({
+        src: ['sounds/bubbles.mp3']
+    });
+
     const circles = [];
     function onKeyDown(event) {
+        sound.play()
         const maxPoint = new Point(view.size.width, view.size.height);
         const randomPoint = Point.random();
         const point = maxPoint * randomPoint;
@@ -19,8 +24,13 @@
     }
 </script>
 <script type="text/javascript" canvas="myCanvas">
+    // const sound = new Howl({
+    //     src: ['sounds/bubbles.mp3']
+    // });
+    //
     // const circles = [];
     // function onKeyDown(event) {
+    //     sound.play()
     //     const maxPoint = new Point(view.size.width, view.size.height);
     //     const randomPoint = Point.random();
     //     const point = maxPoint * randomPoint;

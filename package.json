@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack --mode=development",
+    "deploy": "cp -r sounds/ dist/ && mv dist/* /var/www/html/patatap-lofi.pat/public_html/",
     "build": "webpack --mode=production"
   },
   "devDependencies": {
