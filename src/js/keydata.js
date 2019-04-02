@@ -1,6 +1,12 @@
 import { Howl } from 'howler'
 
-module.exports = {
+//class Howl {
+  //constructor (whatever) {
+    //this.whatever = whatever
+  //}
+//}
+
+export default {
   q: {
     sound: new Howl({
       src: ['sounds/bubbles.mp3']
