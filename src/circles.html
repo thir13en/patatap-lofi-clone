@@ -1,57 +1,29 @@
-<script type="text/paperscript" canvas="myCanvas">
-    // console.log(keyBindings);
-    const sound = new Howl({
-        src: ['sounds/bubbles.mp3']
-    });
+<!--<script type="text/paperscript" canvas="myCanvas">-->
+<!--    const sound = new Howl({-->
+<!--        src: ['sounds/bubbles.mp3']-->
+<!--    });-->
 
-    const circles = [];
-    function onKeyDown(event) {
-        sound.play()
-        const maxPoint = new Point(view.size.width, view.size.height);
-        const randomPoint = Point.random();
-        const point = maxPoint * randomPoint;
+<!--    const circles = [];-->
+<!--    function onKeyDown(event) {-->
+<!--        sound.play()-->
+<!--        const maxPoint = new Point(view.size.width, view.size.height);-->
+<!--        const randomPoint = Point.random();-->
+<!--        const point = maxPoint * randomPoint;-->
 
-        const circle = new Path.Circle(point, 333);
-        circle.fillColor = 'red';
+<!--        const circle = new Path.Circle(point, 333);-->
+<!--        circle.fillColor = 'red';-->
 
-        circles.push(circle);
-    }
+<!--        circles.push(circle);-->
+<!--    }-->
 
-    function onFrame(event) {
-        circles.forEach(circle => {
-            circle.fillColor.hue += 1;
-            circle.scale(.9);
-        });
-    }
-</script>
-<script type="text/javascript" canvas="myCanvas">
-    console.log(keyBindings);
-    // const sound = new Howl({
-    //     src: ['sounds/bubbles.mp3']
-    // });
-    //
-    // const sound2 = new Howl({
-    //     src: ['sounds/bubbles.mp3']
-    // });
-    //
-    // const circles = [];
-    // function onKeyDown(event) {
-    //     sound.play()
-    //     const maxPoint = new Point(view.size.width, view.size.height);
-    //     const randomPoint = Point.random();
-    //     const point = maxPoint * randomPoint;
-    //
-    //     const circle = new Path.Circle(point, 333);
-    //     circle.fillColor = 'red';
-    //
-    //     circles.push(circle);
-    // }
-    //
-    // function onFrame(event) {
-    //     circles.forEach(circle => {
-    //         circle.fillColor.hue += 1;
-    //         circle.scale(.9);
-    //     });
-    // }
+<!--    function onFrame(event) {-->
+<!--        circles.forEach(circle => {-->
+<!--            circle.fillColor.hue += 1;-->
+<!--            circle.scale(.9);-->
+<!--        });-->
+<!--    }-->
+<!--</script>-->
+<script type="text/javascript">
+    console.log('main');
 </script>
 <canvas id="myCanvas" resize width="100%"></canvas>

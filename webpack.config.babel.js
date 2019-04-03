@@ -1,19 +1,14 @@
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const projectName = 'LoFi Patatap clone';
-const indexPath = 'src/js/index.js';
+const indexPath = 'src/js/Paper.js';
 const templatePath = 'src/circles.html';
 
 module.exports = {
-  entry: {
-    app: path.join(__dirname, indexPath)
-  },
+  entry: path.join(__dirname, indexPath),
   output: {
-    filename: 'main.js',
-    sourceMapFilename: "main.map",
-    libraryTarget: 'var',
-    library: 'main'
+    filename: 'main.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
