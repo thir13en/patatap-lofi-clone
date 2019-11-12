@@ -1,0 +1,31 @@
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <canvas id="myCanvas" resize width="100%"></canvas>
+</body>
+<script type="text/paperscript" canvas="myCanvas">
+    const sound = new Howl({
+        src: ['sounds/bubbles.mp3']
+    });
+
+    const circles = [];
+    function onKeyDown(event) {
+        sound.play()
+        const maxPoint = new Point(view.size.width, view.size.height);
+        const randomPoint = Point.random();
+        const point = maxPoint * randomPoint;
+
+        const circle = new Path.Circle(point, 333);
+        circle.fillColor = 'red';
+
+        circles.push(circle);
+    }
+
+    function onFrame(event) {
+        circles.forEach(circle => {
+            circle.fillColor.hue += 1;
+            circle.scale(.9);
+        });
+    }
+</script>

@@ -1,10 +1,10 @@
 import { Howl } from 'howler'
 
-//class Howl {
-  //constructor (whatever) {
-    //this.whatever = whatever
-  //}
-//}
+// class Howl {
+//   constructor (whatever) {
+//     this.whatever = whatever
+//   }
+// }
 
 export default {
   q: {

@@ -1,6 +1,6 @@
 // vendor libs
-// import paper from 'paper'
-// import * as keyBindings from './keydata'
+import paper from 'paper'
+import * as keyBindings from './keydata'
 
 // styles
 import 'normalize.css'

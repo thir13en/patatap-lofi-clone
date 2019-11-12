@@ -8,8 +8,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack --mode=development",
-    "deploy": "cp -r sounds/ dist/ && cp -r  dist/* /var/www/html/patatap-lofi.pat/public_html/ && rm -rf dist/",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "deploy": "cp -r sounds/ dist/ && cp -r  dist/* /var/www/html/patatap/public_html/ && rm -rf dist/"
   },
   "devDependencies": {
     "@babel/cli": "~7.7.0",

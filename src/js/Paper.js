@@ -1,13 +1,13 @@
-import paper from 'paper';
-// import { Howl } from 'howler';
+import paper from 'paper'
+import { Howl } from 'howler'
 
 export default class PaperBase {
 
   constructor () {
-    // this.sound = new Howl({
-    //   src: ['sounds/bubbles.mp3']
-    // });
-    this.circles = [];
+  // this.sound = new Howl({
+  //   src: ['sounds/bubbles.mp3']
+  // });
+    this.circles = []
     this.canvas = document.getElementById('myCanvas')
     this.scope = {}
     paper.install(this.scope)
@@ -30,7 +30,6 @@ export default class PaperBase {
 
     const circle = new paper.Path.Circle(point, 333)
     circle.fillColor = 'red'
-
     this.circles.push(maxPoint)
   }
 
