@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const projectName = 'LoFi Patatap clone';
-const indexPath = 'src/js/Paper.js';
+const indexPath = 'src/js/index.js';
 const templatePath = 'src/index.html';
 
 module.exports = {
