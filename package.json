@@ -2,9 +2,9 @@
   "name": "patatap_lofi_clone",
   "version": "1.0.0",
   "description": "Creating a low fidelity clone of patatapp demo site",
-  "main": "src/js/index.js",
+  "private": true,
   "repository": "https://github.com/thir13en/patatap-lofi-clone.git",
-  "author": "santiloopz",
+  "author": "thir13en",
   "license": "MIT",
   "scripts": {
     "dev": "webpack --mode=development",
