@@ -1,10 +1,10 @@
 // vendor libs
 import paper from 'paper';
 import * as keyBindings from './keydata';
-import PaperClass from './Paper';
+import DancingCircles from './DancingCircles';
 
 // styles
 import 'normalize.css';
 import '../scss/styles.scss';
 
-const paperClass = new PaperClass();
+const cirlces = new DancingCircles();

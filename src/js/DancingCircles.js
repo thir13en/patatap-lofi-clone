@@ -2,7 +2,7 @@ import paper from 'paper';
 import { Howl } from 'howler';
 
 
-export default class PaperBase {
+export default class DancingCircles {
 
   constructor () {
     this.scope = {};
