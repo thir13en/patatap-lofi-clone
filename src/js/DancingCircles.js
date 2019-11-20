@@ -25,15 +25,16 @@ export default class DancingCircles {
   }
 
   onKeyDown(event) {
-    const sound = keymap[event.key].sound;
-    const maxPoint = new Point(this.paper.view.size.width, this.paper.view.size.height);
-    const randomPoint = new Point.random();
-    const point = maxPoint.multiply(randomPoint);
-    const circle = new Path.Circle(point, 333);
+    const keybinding = keymap[event.key];
+    if (keybinding) {
+      const maxPoint = new Point(this.paper.view.size.width, this.paper.view.size.height);
+      const randomPoint = new Point.random();
+      const circle = new Path.Circle(maxPoint.multiply(randomPoint), 333);
 
-    circle.fillColor = keymap[event.key].color;
-    sound.play(undefined, false);
-    this.circles.push(circle);
+      circle.fillColor = keymap[event.key].color;
+      keybinding.sound.play(undefined, false);
+      this.circles.push(circle);
+    }
   }
 
   onFrame() {
