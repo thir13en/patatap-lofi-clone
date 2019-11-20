@@ -1,12 +1,11 @@
 import paper from 'paper';
-import { Howl } from 'howler';
+import keymap from './keymap';
 
 
 export default class DancingCircles {
 
   constructor () {
     this.scope = {};
-    this.sound = new Howl({ src: ['sounds/bubbles.mp3'] });
     this.circles = [];
     this.paperCanvas = document.getElementById('myCanvas');
     this.setupPaper();
@@ -25,14 +24,15 @@ export default class DancingCircles {
     paper.view.onFrame = this.onFrame.bind(this);
   }
 
-  onKeyDown() {
+  onKeyDown(event) {
+    const sound = keymap[event.key].sound;
     const maxPoint = new paper.Point(this.paper.view.size.width, this.paper.view.size.height);
     const randomPoint = new paper.Point.random();
     const point = maxPoint.multiply(randomPoint);
     const circle = new paper.Path.Circle(point, 333);
 
-    circle.fillColor = new paper.Color(1, 0, 0);
-    this.sound.play(undefined, false);
+    circle.fillColor = keymap[event.key].color;
+    sound.play(undefined, false);
     this.circles.push(circle);
   }
 
@@ -40,6 +40,7 @@ export default class DancingCircles {
     this.circles.forEach(circle => {
       circle.fillColor.hue += 1;
       circle.scale('.9');
+      console.log(circle);
     });
   }
 
