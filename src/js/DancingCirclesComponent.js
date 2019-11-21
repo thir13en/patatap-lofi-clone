@@ -2,12 +2,12 @@ import paper, { Tool, Point, Path } from 'paper';
 import keymap from './keymap';
 
 
-export default class DancingCircles {
+export default class DancingCirclesComponent {
 
-  constructor () {
+  constructor (paperCanvas) {
     this.scope = {};
     this.circles = [];
-    this.paperCanvas = document.getElementById('myCanvas');
+    this.paperCanvas = paperCanvas;
     this.setupPaper();
     this.addEvents();
   }
@@ -38,10 +38,15 @@ export default class DancingCircles {
   }
 
   onFrame() {
+    const fadedCircles = [];
     this.circles.forEach(circle => {
       circle.fillColor.hue += 1;
       circle.scale('.9');
+      if (circle.area < 1) {
+        fadedCircles.push(circle);
+      }
     });
+    fadedCircles.forEach(fadedCircle => this.circles.splice(fadedCircle, 1));
   }
 
 }

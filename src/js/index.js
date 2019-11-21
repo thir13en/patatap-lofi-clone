@@ -1,10 +1,12 @@
 // vendor libs
-import paper from 'paper';
-import * as keyBindings from './keymap';
-import DancingCircles from './DancingCircles';
+import DancingCirclesComponent from './DancingCirclesComponent';
 
 // styles
 import 'normalize.css';
 import '../scss/styles.scss';
 
-const cirlces = new DancingCircles();
+// get canvas
+const canvasEl = document.getElementById('myCanvas');
+
+// start action
+new DancingCirclesComponent(canvasEl);
