@@ -1,9 +1,7 @@
-// vendor libs
-import DancingCirclesComponent from './DancingCirclesComponent';
-
-// styles
 import 'normalize.css';
 import '../scss/styles.scss';
+
+import DancingCirclesComponent from './DancingCirclesComponent';
 
 // get canvas
 const canvasEl = document.getElementById('myCanvas');
