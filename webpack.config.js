@@ -8,19 +8,7 @@ const templatePath = 'src/index.html';
 
 module.exports = {
   entry: path.join(__dirname, indexPath),
-  output: {
-    filename: 'main.js'
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: projectName,
-      template: path.join(__dirname, templatePath)
-    })
-  ],
-  stats: {
-    colors: true,
-  },
-  devtool: 'source-map',
+  output: { filename: 'main.js' },
   module: {
     rules: [
       {
@@ -35,5 +23,15 @@ module.exports = {
         use:['style-loader','css-loader', 'sass-loader']
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: projectName,
+      template: path.join(__dirname, templatePath)
+    })
+  ],
+  stats: {
+    colors: true,
+  },
+  devtool: 'source-map'
 };
