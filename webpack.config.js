@@ -5,6 +5,7 @@ const projectName = 'LoFi Patatap clone';
 const indexPath = 'src/js/index.js';
 const templatePath = 'src/index.html';
 
+
 module.exports = {
   entry: path.join(__dirname, indexPath),
   output: {
