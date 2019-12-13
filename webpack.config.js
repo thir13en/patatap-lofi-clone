@@ -33,9 +33,6 @@ module.exports = {
   stats: {
     colors: true,
   },
-  devServer: {
-    contentBase: './dist',
-  },
   optimization: {
     splitChunks: {
       chunks: 'all',
