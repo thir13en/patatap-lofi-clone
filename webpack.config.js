@@ -15,23 +15,32 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
         }
       },
       {
         test:/\.(s*)css$/,
-        use:['style-loader','css-loader', 'sass-loader']
+        use:['style-loader','css-loader', 'sass-loader'],
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: projectName,
-      template: path.join(__dirname, templatePath)
+      template: path.join(__dirname, templatePath),
     })
   ],
   stats: {
     colors: true,
   },
-  devtool: 'source-map'
+  devServer: {
+    contentBase: './dist',
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    }
+  },
+  devtool: 'source-map',
+
 };
